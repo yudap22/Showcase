@@ -303,6 +303,8 @@ a {
     transform: scale(1.5);
     position: relative;
     z-index: 20;
+    box-shadow: 0 4px 24px rgba(213, 255, 63, 0.1);
+    border: 1px solid rgba(213, 255, 63, 50%);
 }
 
 .line-1:hover {
