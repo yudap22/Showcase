@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Navbar*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 100px;
+    width: 100%;
+
+    background-color: rgba(53, 53, 53, 0.15);
+    backdrop-filter: blur(25px);
+
+    align-items: center;
+    position: fixed;
+    top: 0px;
+
+    border-style: inherit;
+    border-bottom: 5px;
+    border-color: rgba(66, 66, 66, 1);
+}
+
+.logo {
+    width: 48px;
+    height: 34px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/*Hero Section*/
+
+.hero-section {
+    width: 100%;
+    height: 100dvh;
+    background-image: url("Image/Hero-bg.png");
+    background-size: cover;
+    background-position: bottom;
+    
+
+    padding: 270px 100px;
+
+}
+
+.name {
+    margin-bottom: 24px;
+    font-size: 60px;
+    width: 200px;
+
+    line-height: 1;
+}
+
+.hero-content {
+    width: 500px;
+}
+
+.role, .caption {
+    display: inline;
+    font-size: 20px;
+}
+
+.name, .caption {
+    color: white;
+}
+
+.role {
+    color: rgba(213, 255, 63, 1);
+}
+
+.text-menu:hover {
+    color: rgba(213, 255, 63, 1);
+    font-weight: 700;
+}
+
+/*Case Study Section*/
+
+.cs-section {
+    background-color: rgba(15, 15, 15, 1);
+    padding: 100px 100px;
+}
+
+.cs-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.title {
+    color: rgba(213, 255, 63, 1);
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.headline, .desc-2 {
+    color: white;
+}
+
+.headline {
+    font-size: 36px;
+    width: 400px;
+}
+
+.desc-2 {
+    font-size: 22px;
+    width: 320px;
+    text-align: right;
+}
+
+/*card*/
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 48px;
+}
+
+.card1, .card2 {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.text-box {
+    width: 20px;
+}
+
+.project-name {
+    font-size: 36px;
+    position: absolute;
+    width: 50px;
+    left: 50px;
+    bottom: 50px;
+}
+
+.card1 {
+    background-image: url(Image/Kamadjaja-bg.png);
+    background-size: cover;
+}
+
+.card2 {
+    background-image: url(Image/bid-bg.png);
+    background-size: cover;
+}
+
+.card1:hover {
+    background-image: url(Image/Kamadjaja-bg-active.png);
+}
+
+.card2:hover {
+    background-image: url(Image/bid-bg-active.png);
+}
+
+.project-name:hover {
+    color: rgba(213, 255, 63, 1);
+}
+
+/*Showcase Section*/
+
+.showcase-section {
+    background-color: rgba(15, 15, 15, 1);
+    padding: 100px 100px;
+}
+
+.sc-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.title {
+    color: rgba(213, 255, 63, 1);
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.headline, .desc-3 {
+    color: white;
+}
+
+.headline {
+    font-size: 36px;
+    width: 400px;
+}
+
+.desc-3 {
+    font-size: 22px;
+    width: 320px;
+    text-align: right;
+}
+
+
+/*Project Showcase*/
+
+.project-showcase {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.line-1, .line-2 {
+    display: flex;
+    width: max-content;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.line-1 {
+    animation: scrollright 35s linear infinite;
+}
+
+.line-2 {
+    animation: scrollleft 35s linear infinite;
+}
+
+.project {
+    width: 300px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+@keyframes scrollright {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollleft {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.line-1:hover {
+    animation-play-state: paused;
+}
+
+.line-2:hover {
+    animation-play-state: paused;
+}
+
+.project:hover {
+    transform: scale(1.5);
+    position: relative;
+    z-index: 99;
+}
+
+
+
